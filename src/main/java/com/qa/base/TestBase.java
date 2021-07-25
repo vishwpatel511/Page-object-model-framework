@@ -14,12 +14,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestBase {
 	
-	Properties prop =new Properties();
-	FileInputStream inputStream;
-	WebDriver driver;
+	static Properties prop =new Properties();
+	static FileInputStream inputStream;
+	public static WebDriver driver;
 	
 	// This method initialize the browser, page
-	public void initialization() {
+	public static void initialization() {
 		
 		
 		
@@ -53,13 +53,14 @@ public class TestBase {
 			System.out.println("Browser not available");
 		}
 		
+		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(20000, TimeUnit.MILLISECONDS);
 		
 	}
 	
-	public void Exit() {
+	public static void Exit() {
 	
 		driver.quit();
 	}
