@@ -14,8 +14,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestBase {
 	
-	static Properties prop =new Properties();
-	static FileInputStream inputStream;
+	public static Properties prop =new Properties();
+	public static FileInputStream inputStream;
 	public static WebDriver driver;
 	
 	// This method initialize the browser, page

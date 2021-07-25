@@ -38,13 +38,13 @@ public class IndexPage extends TestBase{
 	
 	//Actions to take
 	
-	public String IndexPageTitleTest() {
+	public String VerifyIndexPageTitle() {
 		
 		return TestBase.driver.getTitle();
 		
 	}
 	
-	public HomePage LoginFunctionalityTest(String userName, String password) {
+	public HomePage VerifyLoginFunctionality(String userName, String password) {
 
 		this.LinkForLogin.click();
 		this.userNameInput.sendKeys(userName);
@@ -55,13 +55,13 @@ public class IndexPage extends TestBase{
 		
 	}
 	
-	public List<WebElement> LinksPresentTest() {
+	public List<WebElement> VerifyLinksPresent() {
 		
 		return this.linkList;
 		
 	}
 	
-	public String AboutUsFooterTest() {
+	public String VerifyAboutUsFooter() {
 		
 		return this.AboutUsfooter.getText();
 		
