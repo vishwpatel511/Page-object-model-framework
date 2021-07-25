@@ -5,9 +5,9 @@
     <classes>
       <class name="com.qa.tests.IndexPageTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="LoginFunctionalityTest"/>
+          <include name="setUp"/>
+          <include name="LinksPresentTest"/>
         </methods>
       </class> <!-- com.qa.tests.IndexPageTest -->
     </classes>
