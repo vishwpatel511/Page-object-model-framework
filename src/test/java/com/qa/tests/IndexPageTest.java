@@ -20,6 +20,10 @@ public class IndexPageTest extends TestBase {
 	
 	IndexPage indexpage = new IndexPage();
 	
+	public IndexPageTest() {
+		super();
+	}
+	
    @BeforeMethod
    public void setUp() {
   
@@ -47,9 +51,10 @@ public class IndexPageTest extends TestBase {
    }
    
    @Test(priority=3)
-   public void LoginFunctionalityTest(String userName, String Password) {
+   public void LoginFunctionalityTest() throws InterruptedException {
 	   
 	   indexpage.VerifyLoginFunctionality(TestBase.prop.getProperty("username"), TestBase.prop.getProperty("password"));
+	   Thread.sleep(2000);
 	   Assert.assertEquals(TestBase.driver.findElement(By.xpath("//div[@id='navbarExample']/ul/li[6]/a")).getText(), "Log out");
 	   }
    
@@ -62,7 +67,7 @@ public class IndexPageTest extends TestBase {
    
    
   @AfterMethod
-  public void tearDown() {
+  public void tearDown() throws InterruptedException {
   
 	  TestBase.Exit();
 	  
