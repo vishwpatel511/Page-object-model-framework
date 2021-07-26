@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="LinksPresentTest"/>
+          <include name="LoginFunctionalityTest"/>
         </methods>
       </class> <!-- com.qa.tests.IndexPageTest -->
     </classes>

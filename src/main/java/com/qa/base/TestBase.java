@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestBase {
@@ -25,7 +26,7 @@ public class TestBase {
 
 		try {
 			prop =new Properties();
-			inputStream = new FileInputStream("C:\\Users\\vishw\\Desktop\\prop.properties");
+			inputStream = new FileInputStream("src/main/java/com/qa/env_vars/prop.properties");
 			prop.load(inputStream);
 		
 		} catch (IOException e) {
@@ -38,7 +39,7 @@ public class TestBase {
 	// This method initialize the browser, page
 	public static void initialization() {
 		
-	/*
+	
 		if(prop.getProperty("browser").equals("firefox")) {
 			
 			
@@ -54,13 +55,11 @@ public class TestBase {
 		}
 		else if(prop.getProperty("browser").equals("ie")) {
 			
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\vishw\\Desktop\\Study Material\\SeleniumJar\\iedriver.exe");
-			driver = new EdgeDriver();
+			System.setProperty("webdriver.ie.driver", "C:\\Users\\vishw\\Desktop\\Study Material\\SeleniumJar\\IEdriver.exe");
+			driver = new InternetExplorerDriver();
 		}
-	*/
+	
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vishw\\Desktop\\Study Material\\SeleniumJar\\chromedriver.exe");
-		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
