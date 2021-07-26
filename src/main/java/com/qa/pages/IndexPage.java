@@ -71,14 +71,18 @@ public class IndexPage extends TestBase{
 		
 	}
 	
-	public HomePage VerifyLoginFunctionality(String userName, String password) {
+	public HomePage VerifyLoginFunctionality(String userName, String password) throws InterruptedException {
 
 		this.LinkForLogin.click();
+		Thread.sleep(1000);
 		this.userNameInput.sendKeys(userName);
+		Thread.sleep(1000);
 		this.passwordInput.sendKeys(password);
 		this.loginButton.click();
+		Thread.sleep(2000);
 		
 		return new HomePage();
+		
 		
 	}
 	
