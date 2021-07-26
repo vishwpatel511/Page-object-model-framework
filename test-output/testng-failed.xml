@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="productSelection"/>
+          <include name="productSelection" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.qa.tests.HomePageTest -->
     </classes>

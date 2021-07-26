@@ -33,7 +33,7 @@ public class HomePageTest extends TestBase{
 		  indexpage = new IndexPage();
 	   	homepage = new HomePage();
 	   	excelreader = new ExcelDataReader();
-	   	reader = new Xls_Reader("C:\\Users\\vishw\\Desktop\\HomePageTestData.xlsx");
+	   	reader = new Xls_Reader("src\\main\\java\\com\\qa\\data\\HomePageTestData.xlsx");
 		  indexpage.VerifyLoginFunctionality(TestBase.prop.getProperty("username"), TestBase.prop.getProperty("password"));
 	  }	
   @Test
@@ -46,42 +46,36 @@ public class HomePageTest extends TestBase{
   }
   
   @DataProvider
-  public Object[][] dataforWeb(){
-	
-	  
+  public Object[][] dataforWeb() { 
 	  Object[][] data;
-	  data = new Object[3][2];
+	  excelreader = new ExcelDataReader();
+	   	reader = new Xls_Reader("src\\main\\java\\com\\qa\\data\\HomePageTestData.xlsx");
+
+	  data = new Object[reader.getRowCount("Sheet1") - 1][reader.getColumnCount("Sheet1")];
 	
 	  int counter = 0;
-	  System.out.println(excelreader.retrivingExcel().size());
-	  for(int i = 0; i<3; i++) {
+	  for(int i = 0; i<reader.getRowCount("Sheet1") - 1; i++) {
 		  
-		  for(int j = 0; j<2; j++) {
+		  for(int j = 0; j<reader.getColumnCount("Sheet1"); j++) {
 		  
 			  data[i][j] = excelreader.retrivingExcel().get(counter);
 		  		counter++;
-		  		System.out.println(excelreader.retrivingExcel().get(counter));
-		  		
-		  		
-		  		// data[3][2]:::: data[0][0]
-		  		
 	  }
 
-		  }
+  }
 	return data;
-	
-	}
+	  }
 	
 	  
   
   @Test(dataProvider = "dataforWeb")
-  public void productSelection(String category, String product) throws InterruptedException {
+  public void productSelection(String product, String brand) throws InterruptedException {
 	  
-	  homepage.VerifyCategories(category, product);
-	 // System.out.println(driver.getCurrentUrl().contains("prod.html"));
+	  Thread.sleep(2000);
+	  homepage.VerifyCategories(product, brand);
+	  // System.out.println(driver.getCurrentUrl().contains("prod.html"));
 	  Assert.assertTrue(driver.getCurrentUrl().contains("prod.html"));
-	  
-  }
+	  }
   
   
   
