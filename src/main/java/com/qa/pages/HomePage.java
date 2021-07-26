@@ -13,7 +13,7 @@ public class HomePage extends TestBase {
 		
 	}
 	
-	WebElement WelcomeLbl = driver.findElement(By.xpath("//div[@id='navbarExample']/ul/li[7]"));
+	WebElement WelcomeLbl = driver.findElement(By.id("nameofuser"));
 	
 	WebElement LogOutLink = driver.findElement(By.xpath("//div[@id='navbarExample']/ul/li[6]"));
 	
