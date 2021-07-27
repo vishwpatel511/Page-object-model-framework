@@ -5,7 +5,7 @@
     <classes>
       <class name="com.qa.tests.PersonalDetailsFormTest">
         <methods>
-          <include name="fillFormTest" invocation-numbers="0"/>
+          <include name="fillFormTest"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
         </methods>
