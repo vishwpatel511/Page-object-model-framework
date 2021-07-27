@@ -34,7 +34,7 @@ public class ShoppingCartPage extends TestBase{
 		
 		WebElement productName = driver.findElement(By.xpath("//tr[@class='success']/td[2]"));
 	
-		//(//tr[@class='success']/td[2])[1]
+		
 		return productName.getText();
 		
 	}

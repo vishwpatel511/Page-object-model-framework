@@ -7,13 +7,13 @@ import com.qa.utils.Xls_Reader;
 
 public class PersonalInfoDataProvider {
 
-	static ExcelDataReader excelreader;
+	static PersonalInfoDataReader excelreader;
 	static Xls_Reader reader;
 	
 	 @DataProvider
-	  public static Object[][] dataforWeb() { 
+	  public static Object[][] dataforPersonalInfo() { 
 		  Object[][] data;
-		  excelreader = new ExcelDataReader();
+		  excelreader = new PersonalInfoDataReader();
 		   	reader = new Xls_Reader("src\\main\\java\\com\\qa\\data\\PersonalInfoPageData.xlsx");
 
 		  data = new Object[reader.getRowCount("Sheet1") - 1][reader.getColumnCount("Sheet1")];

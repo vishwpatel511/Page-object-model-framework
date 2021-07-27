@@ -11,9 +11,15 @@ public class PersonalInfoModalPage extends TestBase {
 		super();
 	}
 	
+	
+public String fillFormVerify(String name, String country, String city, String cardNum, String month, String year) throws InterruptedException {
+	
+
 	WebElement nameInputBox = driver.findElement(By.id("name"));
 	
 	WebElement countryInputBox = driver.findElement(By.id("country"));
+	
+	WebElement cityInputBox = driver.findElement(By.id("city"));
 	
 	WebElement cardInputBox = driver.findElement(By.id("card"));
 	
@@ -23,19 +29,18 @@ public class PersonalInfoModalPage extends TestBase {
 
 	WebElement purchaseBtn = driver.findElement(By.xpath("//button[text() = 'Purchase']"));
 
-	WebElement orderConfirmationMsg = driver.findElement(By.xpath("//p[@class = 'lead text-muted ']"));
-	
-public String fillFormVerify(String name, String country, String cardNum, String month, String year) throws InterruptedException {
+	//WebElement orderConfirmationMsg = driver.findElement(By.xpath("//p[@class = 'lead text-muted ']"));
 	
 	nameInputBox.sendKeys(name);
 	countryInputBox.sendKeys(country);
+	cityInputBox.sendKeys(city);
 	cardInputBox.sendKeys(cardNum);
 	monthInputBox.sendKeys(month);
 	yearInputBox.sendKeys(year);
 	Thread.sleep(2000);
 	purchaseBtn.click();
 	Thread.sleep(3000);
-	return orderConfirmationMsg.getText();
+	return driver.findElement(By.xpath("//p[@class = 'lead text-muted ']")).getText();
 }
 
 
