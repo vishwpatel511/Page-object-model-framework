@@ -66,6 +66,7 @@ public void PlaceOrderBtnVerify(String category, String product) throws Interrup
 	 Thread.sleep(2000);
 	 productspage.VerifyaddToCartBtn().accept();
 	 shoppingcartpage.PlaceOrderBtnVerify();
+	 Thread.sleep(2000);
 	
 }
   
