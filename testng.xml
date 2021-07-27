@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
+<listeners>
+		
+		<listener class-name="com.qa.extentreport.ExtentreportListener" />
+	</listeners>
+
   <test thread-count="5" name="TestNG">
     <classes>
+      <class name="com.qa.tests.ProductPageTest"/>
+      <class name="com.qa.tests.ShoppingCartPageTest"/>
+      <class name="com.qa.tests.PersonalDetailsFormTest"/>
+      <class name="com.qa.tests.HomePageTest"/>
       <class name="com.qa.tests.IndexPageTest"/>
     </classes>
   </test> <!-- TestNG -->
