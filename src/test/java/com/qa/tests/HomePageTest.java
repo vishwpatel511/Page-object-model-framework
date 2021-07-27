@@ -11,7 +11,7 @@ import com.qa.utils.Xls_Reader;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 public class HomePageTest extends TestBase{
