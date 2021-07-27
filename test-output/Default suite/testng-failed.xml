@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.ProductPageTest">
+      <class name="com.qa.tests.ShoppingCartPageTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="AddToCartBtnTest" invocation-numbers="0 1 2"/>
+          <include name="PlaceOrderBtnVerify"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.qa.tests.ProductPageTest -->
+      </class> <!-- com.qa.tests.ShoppingCartPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

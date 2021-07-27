@@ -35,7 +35,6 @@ public class ProductPageTest extends TestBase {
 
 		 IndexPage indexpage = new IndexPage();
 		 indexpage.VerifyLoginFunctionality(prop.getProperty("username"), prop.getProperty("password"));
-	//	 homepage = new HomePage();
 		 homepagetest = new HomePageTest();
 		 productpage = new ProductsPage();
 		
